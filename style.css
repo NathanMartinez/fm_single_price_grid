@@ -104,6 +104,12 @@ main #sign-up button {
     font-size: 1rem;
 }
 
+main #sign-up button:hover {
+    cursor: pointer;
+    filter: brightness(.95);
+    box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.2);
+}
+
 main #why-us {
     background-color: var(--light-cyan);
     color: #fff;
