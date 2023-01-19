@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Karla', sans-serif;
+}
+
+:root {
+    /* Primary */
+    --cyan: hsl(179, 62%, 43%);
+    --light-cyan: hsl(179, 55%, 47%);
+    --bright-yellow: hsl(71, 73%, 54%);
+    /* Neutral */
+    --light-gray: hsl(204, 43%, 93%);
+    --grayish-blue: hsl(218, 22%, 67%);
+}
+
+body {
+    background-color: var(--light-gray);
+    font-size: 16px;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main {
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: 1fr;
+    width: 350px;
+    border-radius: 0.5rem;
+    overflow: hidden;
+}
+
+main section {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1.5rem;
+    line-height: 1.5rem;
+}
+
+main,
+button {
+    box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
+}
+
+main #join {
+    background-color: #fff;
+    color: var(--grayish-blue);
+}
+
+main #join h1 {
+    color: var(--cyan);
+    font-size: 1.25rem;
+}
+
+main #join h2 {
+    color: var(--bright-yellow);
+    font-size: 1rem;
+}
+
+main #sign-up {
+    background-color: var(--cyan);
+    color: #fff;
+    justify-content: space-evenly;
+}
+
+main #sign-up h1 {
+    font-size: 1rem;
+}
+
+main #sign-up #price {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+main #sign-up #price h2 {
+    font-size: 2rem;
+    color: #fff;
+}
+
+main #sign-up #price span {
+    color: var(--light-gray);
+    font-weight: 400;
+}
+
+main #sign-up button {
+    background-color: var(--bright-yellow);
+    color: #fff;
+    width: 100%;
+    border: none;
+    padding: 1rem;
+    border-radius: .3rem;
+    font-weight: 700;
+    font-size: 1rem;
+}
+
+main #why-us {
+    background-color: var(--light-cyan);
+    color: #fff;
+}
+
+main #why-us h1 {
+    font-size: 1.25rem;
+}
+
+main #why-us ul {
+    list-style-type: none;
+    color: var(--light-gray);
+}
+
+.attribution {
+    position: absolute;
+    bottom: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+@media (min-width: 700px) {
+    main {
+        width: 675px;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: auto;
+        grid-template-areas: "join join"
+            "sign-up why-us";
+    }
+
+    main section {
+        padding: 3rem;
+    }
+
+    main #join {
+        grid-area: join;
+    }
+
+    main #sign-up {
+        grid-area: sign-up;
+    }
+
+    main #why-us {
+        grid-area: why-us;
+    }
+}
