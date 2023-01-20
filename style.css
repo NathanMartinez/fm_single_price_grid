@@ -30,103 +30,105 @@ main {
     display: grid;
     grid-template-rows: repeat(3, 1fr);
     grid-template-columns: 1fr;
-    width: 350px;
+    width: 315px;
     border-radius: 0.5rem;
     overflow: hidden;
 }
 
-main section {
+main>div {
     display: flex;
     flex-direction: column;
+    justify-content: space-evenly;
     padding: 1.5rem;
     line-height: 1.5rem;
 }
 
 main,
-button {
+.sign-up-button {
     box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
 }
 
-main #join {
+main .join {
     background-color: #fff;
     color: var(--grayish-blue);
-    gap: 1rem;
+    gap: .5rem;
 }
 
-main #join h1 {
+main .join h1 {
     color: var(--cyan);
     font-size: 1.45rem;
 }
 
-main #join h2 {
+main .join p:first-of-type {
     color: var(--bright-yellow);
-    font-size: 1.09rem;
+    font-size: 1.13rem;
 }
 
-main #sign-up {
+main .sign-up {
     background-color: var(--cyan);
     color: #fff;
     justify-content: space-evenly;
 }
 
-main #sign-up h1 {
-    font-size: 1rem;
+main .sign-up h2 {
+    font-size: 1.1rem;
 }
 
-main #sign-up #price {
+main .sign-up .price {
     display: flex;
     align-items: center;
     gap: 1rem;
 }
 
-main #sign-up #price h2 {
+main .sign-up .price h2 {
     font-size: 2rem;
     color: #fff;
 }
 
-main #sign-up #price span {
+main .sign-up .price span {
     color: var(--light-gray);
     font-weight: 400;
 }
 
-main #sign-up p {
+main .sign-up p {
     font-size: 0.95rem;
 }
 
-main #sign-up button {
+main .sign-up .sign-up-button {
     background-color: var(--bright-yellow);
     color: #fff;
     width: 100%;
-    border: none;
-    padding: 1rem;
+    padding: .75rem;
     border-radius: .3rem;
     font-weight: 700;
     font-size: 1rem;
+    text-decoration: none;
+    text-align: center;
 }
 
-main #sign-up button:hover {
+main .sign-up .sign-up-button:hover {
     cursor: pointer;
     filter: brightness(.95);
     box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.2);
 }
 
-main #why-us {
+main .why-us {
     background-color: var(--light-cyan);
     color: #fff;
     gap: 1rem;
 }
 
-main #why-us h1 {
-    font-size: 1rem;
+main .why-us h2 {
+    font-size: 1.1rem;
 }
 
-main #why-us ul {
+main .why-us ul {
     list-style-type: none;
     color: var(--light-gray);
     line-height: 1.25rem;
 }
 
-main #why-us li {
+main .why-us li {
     font-size: 0.85rem;
 }
 
@@ -143,29 +145,29 @@ main #why-us li {
     color: hsl(228, 45%, 44%);
 }
 
-@media (min-width: 700px) {
+@media (min-width: 40em) {
     main {
         width: 625px;
-        height: 475px;
+        height: 470px;
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: auto;
         grid-template-areas: "join join"
             "sign-up why-us";
     }
 
-    main section {
-        padding: 1.35rem 2rem;
+    main>div {
+        padding: 1.35rem 2.5rem;
     }
 
-    main #join {
+    main .join {
         grid-area: join;
     }
 
-    main #sign-up {
+    main .sign-up {
         grid-area: sign-up;
     }
 
-    main #why-us {
+    main .why-us {
         grid-area: why-us;
     }
 }
